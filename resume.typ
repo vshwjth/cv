@@ -1,12 +1,12 @@
-#import "@preview/basic-resume:0.2.9": *
+#import "template.typ": *
 
-#let name = "Your Name"
-#let location = "City, Country"
-#let email = "you@example.com"
-#let github = "github.com/your-username"
-#let linkedin = "linkedin.com/in/your-username"
-#let phone = "+00 00000 00000"
-#let personal-site = "your-site.example"
+#let name = "Vishwajith S. S."
+#let location = "Chennai, India"
+#let email = "vishwajith.ss@gmail.com"
+#let github = "github.com/vshwjth"
+#let linkedin = "linkedin.com/in/vshwjth"
+#let phone = "+91 70129 74738"
+#let personal-site = "vishwa.fyi"
 
 #show: resume.with(
   author: name,
@@ -16,12 +16,22 @@
   linkedin: linkedin,
   phone: phone,
   personal-site: personal-site,
-  accent-color: "#b91c1c",
+  accent-color: "#106166",
   font: "Inter",
   paper: "a4",
   author-position: left,
   personal-info-position: left,
 )
+
+== Education
+
+#edu(
+  institution: "SSN College of Engineering",
+  location: "Chennai, India",
+  dates: dates-helper(start-date: "Sep 2020", end-date: "May 2024"),
+  degree: "B.Tech, Information Technology",
+)
+- CGPA: 8.577
 
 == Summary
 
@@ -48,16 +58,6 @@ Write two or three sentences that summarize your experience, strongest skills, a
 )
 - Describe the problem, your solution, and the result.
 - List the most relevant technologies and technical decisions.
-
-== Education
-
-#edu(
-  institution: "University or College",
-  location: "City, Country",
-  dates: dates-helper(start-date: "Aug 2020", end-date: "May 2024"),
-  degree: "Degree, Field of Study",
-)
-- Add relevant coursework, honors, or achievements if they support your application.
 
 == Skills
 
