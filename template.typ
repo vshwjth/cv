@@ -29,8 +29,10 @@
 
   show link: underline
   show link: set text(fill: rgb(accent-color))
+  show strong: it => text(weight: 650, it.body)
   show heading: set text(fill: rgb(accent-color))
   show heading.where(level: 2): it => [
+    #set text(weight: 650)
     #pad(top: 0pt, bottom: -10pt, [#smallcaps(it.body)])
     #line(
       length: 100%,
@@ -39,7 +41,7 @@
   ]
   show heading.where(level: 1): it => [
     #set align(author-position)
-    #set text(weight: 700, size: author-font-size)
+    #set text(weight: 650, size: author-font-size)
     #pad(it.body)
   ]
 

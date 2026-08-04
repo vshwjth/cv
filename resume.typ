@@ -61,11 +61,5 @@ Write two or three sentences that summarize your experience, strongest skills, a
 
 == Skills
 
-#generic-one-by-two(
-  left: [*Languages:*],
-  right: [Language One, Language Two, Language Three],
-)
-#generic-one-by-two(
-  left: [*Technologies:*],
-  right: [Framework One, Tool Two, Platform Three],
-)
+*Languages:* Language One, Language Two, Language Three \
+*Technologies:* Framework One, Tool Two, Platform Three
