@@ -16,7 +16,7 @@
   linkedin: linkedin,
   phone: phone,
   personal-site: personal-site,
-  accent-color: "#106166",
+  accent-color: "#2B6150",
   font: "Inter",
   paper: "a4",
   author-position: left,
