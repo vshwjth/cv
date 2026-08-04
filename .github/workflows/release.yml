@@ -26,14 +26,15 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          tag="resume-${GITHUB_SHA}"
-          short_sha="${GITHUB_SHA::7}"
+          commit_time="$(git show -s --format=%ct "$GITHUB_SHA")"
+          version="$(date -u -d "@${commit_time}" +"%Y-%m-%dT%H:%M:%SZ")"
+          tag="resume-${version//:/-}"
 
           if gh release view "$tag" >/dev/null 2>&1; then
             gh release upload "$tag" resume.pdf --clobber
           else
             gh release create "$tag" resume.pdf \
               --target "$GITHUB_SHA" \
-              --title "Resume ${short_sha}" \
+              --title "Resume ${version}" \
               --notes "Automatically generated from commit ${GITHUB_SHA}."
           fi

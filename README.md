@@ -27,6 +27,6 @@ typst compile --ignore-system-fonts --font-path fonts resume.typ resume.pdf
 
 ## GitHub releases
 
-Every push to `main` runs `.github/workflows/release.yml`. The workflow compiles `resume.pdf`, then creates a release named for the commit. Rerunning the workflow for the same commit replaces the existing PDF asset.
+Every push to `main` runs `.github/workflows/release.yml`. The workflow compiles `resume.pdf`, then creates a release named with the commit's ISO 8601 timestamp. Rerunning the workflow for the same commit replaces the existing PDF asset.
 
 The workflow needs the repository's default `GITHUB_TOKEN` with write access to repository contents. The workflow declares this permission in its configuration. If an organization blocks write access, enable **Read and write permissions** under **Settings > Actions > General > Workflow permissions**.
