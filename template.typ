@@ -13,7 +13,7 @@
   font: "New Computer Modern",
   paper: "us-letter",
   author-font-size: 20pt,
-  font-size: 10pt,
+  font-size: 11pt,
   lang: "en",
   body,
 ) = {
@@ -25,15 +25,15 @@
     ligatures: false,
   )
   set page(margin: 0.5in, paper: paper)
-  set par(justify: true)
+  set par(justify: false)
+  set list(tight: false, spacing: 0.55em, indent: 0.6em)
 
   show link: underline
-  show link: set text(fill: rgb(accent-color))
-  show strong: it => text(weight: 650, it.body)
+  show strong: it => text(weight: 600, it.body)
   show heading: set text(fill: rgb(accent-color))
   show heading.where(level: 2): it => [
-    #set text(weight: 650)
-    #pad(top: 0pt, bottom: -10pt, [#smallcaps(it.body)])
+    #set text(weight: 600)
+    #pad(top: 0pt, bottom: -10pt, it.body)
     #line(
       length: 100%,
       stroke: (paint: rgb("#B8BDC3"), thickness: 0.75pt),
@@ -41,7 +41,7 @@
   ]
   show heading.where(level: 1): it => [
     #set align(author-position)
-    #set text(weight: 650, size: author-font-size)
+    #set text(weight: 600, size: author-font-size)
     #pad(it.body)
   ]
 
@@ -112,14 +112,14 @@
     generic-two-by-two(
       top-left: strong(institution),
       top-right: dates,
-      bottom-left: emph(degree),
+      bottom-left: degree,
       bottom-right: emph(location),
     )
   } else {
     generic-two-by-two(
       top-left: strong(institution),
       top-right: location,
-      bottom-left: emph(degree),
+      bottom-left: degree,
       bottom-right: emph(dates),
     )
   }
