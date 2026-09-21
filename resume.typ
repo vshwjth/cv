@@ -33,7 +33,6 @@ software in Swift, Objective-C, and~#box[C++.]
 
 #work(
   title: "Member of Technical Staff",
-  location: [#text(weight: "regular", fill: luma(100))[Chennai]],
   company: [Zoho Corporation (ManageEngine Endpoint Central)],
   dates: "Feb 2024 – Present",
 )
@@ -56,7 +55,6 @@ and updates.
 
 #work(
   title: "Software Development Intern",
-  location: [#text(weight: "regular", fill: luma(100))[Chennai]],
   company: "Rocketlane",
   dates: "Jun 2023 – Aug 2023",
 )
@@ -91,9 +89,9 @@ Worked on the front end of their customer onboarding platform.
 
 #edu(
   institution: "SSN College of Engineering",
-  location: "Chennai, India",
   dates: "Sep 2020 – May 2024",
   degree: "B.Tech, Information Technology | CGPA 8.58",
+  consistent: true,
 )
 
 == Skills
